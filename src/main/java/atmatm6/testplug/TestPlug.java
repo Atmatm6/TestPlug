@@ -21,10 +21,11 @@ public class TestPlug extends Plugin {
                 getLogger().info(serverInfo.getAddress().toString());
             }
         });
+        getProxy().getPluginManager().registerCommand(this, new TestCommand());
         new File(getDataFolder(), "config.yml");
     }
 
-    public class TestCommand extends Command{
+    class TestCommand extends Command{
 
         public TestCommand(){
             super("asu");
@@ -32,7 +33,7 @@ public class TestPlug extends Plugin {
 
         @Override
         public void execute(CommandSender commandSender, String[] strings) {
-            commandSender.sendMessage(new ComponentBuilder("Hello world!").color(ChatColor.GREEN).create());
+            commandSender.sendMessage(new ComponentBuilder("Hello there!").color(ChatColor.GREEN).create());
         }
     }
 }
