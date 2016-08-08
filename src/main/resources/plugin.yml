@@ -1,0 +1,4 @@
+name: TestPlug
+main: atmatm6.testplug.TestPlug
+version: 1.0
+author: Atmatm6
