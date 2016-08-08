@@ -7,6 +7,7 @@ public class TestPlug extends Plugin {
     public void onEnable() {
         // You should not put an enable message in your plugin.
         // BungeeCord already does so
-        getLogger().info("Yay! It loads!");
+        getLogger().info(getProxy().getServers().get("creative").getAddress().toString());
+
     }
 }
